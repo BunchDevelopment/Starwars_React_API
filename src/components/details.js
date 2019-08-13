@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "react-bootstrap/Modal";
 
 class Details extends React.Component {
   state = { showing: false };
@@ -7,11 +8,14 @@ class Details extends React.Component {
     const { showing } = this.state;
     return (
       <div>
-        <button onClick={() => this.setState({ showing: !showing })}>
-          Show {this.props.character.name}'s details
+        <button
+          className="butn"
+          onClick={() => this.setState({ showing: !showing })}
+        >
+          {this.props.character.name}'s details
         </button>
         {showing ? (
-          <p>
+          <p className="detailsSection">
             Height: {this.props.character.height}
             <br />
             Mass: {this.props.character.mass}
@@ -26,25 +30,41 @@ class Details extends React.Component {
             <br />
             Gender: {this.props.character.gender}
             <br />
-            Homeworld: {this.props.character.homeworld}
+            <span>
+              Homeworld:{" "}
+              <a href="{this.props.character.homeworld}" target="_blank">
+                {this.props.character.homeworld}
+              </a>
+            </span>
             <br />
             Films:{" "}
             {this.props.character.films.map(function(film) {
               return (
                 <>
-                  <span>{film}</span>
+                  <span>
+                    <a href="{film}" target="_blank">
+                      {film}
+                    </a>
+                  </span>
                   <br />
                 </>
               );
             })}
             <br />
-            Species: {this.props.character.species}
+            Species:{" "}
+            <a href="{this.props.character.species}" target="_blank">
+              {this.props.character.species}
+            </a>
             <br />
             Vehicles:{" "}
             {this.props.character.vehicles.map(function(vehicles) {
               return (
                 <>
-                  <span>{vehicles}</span>
+                  <span>
+                    <a href="{vehicles}" target="_blank">
+                      {vehicles}
+                    </a>
+                  </span>
                   <br />
                 </>
               );
@@ -54,7 +74,11 @@ class Details extends React.Component {
             {this.props.character.starships.map(function(starships) {
               return (
                 <>
-                  <span>{starships}</span>
+                  <span>
+                    <a href="{starships}" target="_blank">
+                      {starships}
+                    </a>
+                  </span>
                   <br />
                 </>
               );

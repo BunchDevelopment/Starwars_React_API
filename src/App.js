@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./css/App.css";
 import axios from "axios";
 import Details from "./components/details";
 export default class App extends React.Component {
@@ -22,13 +22,11 @@ export default class App extends React.Component {
     console.log(this.state.characters);
     return (
       <div className="App">
-        <div>
+        <div className="container">
           {this.state.characters.map(character => (
             <>
-              <h1>{character.name}</h1>
-              <div>
-                <Details character={character} id={character.name} />
-              </div>
+              <h1 className="heading">{character.name}</h1>
+              <Details character={character} />
               {/* <Details character={character} id={character.name} /> */}
             </>
           ))}
