@@ -33,7 +33,7 @@ class Details extends React.Component {
                 <br />
                 <span>
                   Homeworld:{" "}
-                  <a href={this.props.character.homeworld} target="_blank">
+                  <a href={this.props.character.homeworld} target="_blank" rel="noopener noreferrer">
                     {this.props.character.homeworld}
                   </a>
                 </span>
@@ -43,7 +43,7 @@ class Details extends React.Component {
                   return (
                     <>
                       <span>
-                        <a href={film} target="_blank">
+                        <a href={film} target="_blank" rel="noopener noreferrer">
                           {film}
                         </a>
                       </span>
@@ -53,7 +53,7 @@ class Details extends React.Component {
                 })}
                 <br />
                 Species:{" "}
-                <a href={this.props.character.species} target="_blank">
+                <a href={this.props.character.species} target="_blank" rel="noopener noreferrer">
                   {this.props.character.species}
                 </a>
                 <br />
@@ -62,7 +62,7 @@ class Details extends React.Component {
                   return (
                     <>
                       <span>
-                        <a href={vehicles} target="_blank">
+                        <a href={vehicles} target="_blank" rel="noopener noreferrer">
                           {vehicles}
                         </a>
                       </span>
@@ -76,7 +76,7 @@ class Details extends React.Component {
                   return (
                     <>
                       <span>
-                        <a href={starships} target="_blank">
+                        <a href={starships} target="_blank" rel="noopener noreferrer">
                           {starships}
                         </a>
                       </span>
