@@ -19,7 +19,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.characters);
     return (
       <div className="App">
         <div className="container">
@@ -27,7 +26,6 @@ export default class App extends React.Component {
             <div className="sectionContainer">
               <h1 className="heading">{character.name}</h1>
               <Details character={character} />
-              {/* <Details character={character} id={character.name} /> */}
             </div>
           ))}
         </div>
