@@ -24,11 +24,11 @@ export default class App extends React.Component {
       <div className="App">
         <div className="container">
           {this.state.characters.map(character => (
-            <>
+            <div className="sectionContainer">
               <h1 className="heading">{character.name}</h1>
               <Details character={character} />
               {/* <Details character={character} id={character.name} /> */}
-            </>
+            </div>
           ))}
         </div>
       </div>
