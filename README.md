@@ -1,3 +1,7 @@
+A React App that I built for a technical assessment. This app takes data from an API (https://swapi.co/api) and then displays a list of characters. Using state, I show or hide their details with a button press! 
+
+You can find this site hosted at https://hopeful-goldstine-e43bde.netlify.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
